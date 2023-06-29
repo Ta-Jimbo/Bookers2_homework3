@@ -1,19 +1,13 @@
 <div class="container">
-
   <div class="row">
 
     <div class="col-3">
-      <div><%= render 'user_info', user: @user %></div>
-      <div>
-        <% if @user==current_user %>
-          <%= render 'books/new', book: Book.new %>
-        <% end %>
-      </div>
+      <%= render 'users/user_info', user: @user=current_user %>
+      <%= render 'new', book: Book.new %>
     </div>
 
     <div class="col-9">
       <h3>Books</h3>
-
       <table>
         <thead>
           <tr>
@@ -36,3 +30,4 @@
 
   </div>
 </div>
+

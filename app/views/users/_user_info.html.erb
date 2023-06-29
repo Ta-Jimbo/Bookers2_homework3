@@ -1,0 +1,25 @@
+<h3>User info</h3>
+<div>
+  <% if user.profile_image.attached? %>
+    <%= image_tag user.profile_image, size: "100x100" %>
+  <% else %>
+    <%= image_tag 'no_image', size: "100x100" %>
+  <% end %>
+</div>
+
+<table>
+  <tbody>
+    <tr>
+      <th>name</th>
+      <th><%= user.name %></th>
+    </tr>
+    <tr>
+      <th>introduction</th>
+      <th><%= user.introduction %></th>
+    </tr>
+  </tbody>
+</table>
+
+<% if @user==current_user %>
+  <a class="row btn btn-outline-secondary btn-block" href="/users/<%= current_user.id %>/edit"><i class="fa-solid fa-user-gear"></i></a>
+<% end %>
