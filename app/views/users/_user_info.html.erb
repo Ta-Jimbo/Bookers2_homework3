@@ -20,6 +20,4 @@
   </tbody>
 </table>
 
-<% if @user==current_user %>
-  <a class="row btn btn-outline-secondary btn-block" href="/users/<%= current_user.id %>/edit"><i class="fa-solid fa-user-gear"></i></a>
-<% end %>
+<a class="row btn btn-outline-secondary btn-block" href="/users/<%= user.id %>/edit"><i class="fa-solid fa-user-cog"></i></a>

@@ -1,20 +1,27 @@
 <div class="container">
-  <h1>Editing book</h1>
+  <h1>Editing Book</h1>
 
   <%= form_with model: @book, url:book_path(@book.id), method: :patch do |f| %>
-  <h4>Title</h4>
-    <%= f.text_field :title %>
-  <h4>Opinion</h4>
-    <%= f.text_area :body %>
-  <%= f.submit 'Update book' %>
+    <h4>Title</h4>
+      <%= f.text_field :title %>
+    <h4>Opinion</h4>
+      <%= f.text_area :body %>
+    <%= f.submit 'Update Book' %>
   <% end %>
 
   <% if @book.errors.any? %>
-    <%= @book.errors.count %>件のエラーが発生しました
+    <% if @book.errors.count==1 %>
+      <%= @book.errors.count %>error prohibited this obj from being saved:
+    <% else %>
+      <%= @book.errors.count %>errors prohibited this obj from being saved:
+    <% end %>
     <ul>
       <% @book.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
   <% end %>
+
+  <%= link_to "Show", book_path %>|<%= link_to "Back", books_path %>
+
 </div>

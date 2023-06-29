@@ -25,7 +25,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link text-white" href='/'><i class="fa-solid fa-house mr-2"></i>Home</a>
+                  <a class="nav-link text-white" href='/'><i class="fa-solid fa-home mr-2"></i>Home</a>
               <% if user_signed_in? %>
                 </li>
                 <li class="nav-item">
@@ -35,7 +35,7 @@
                   <a class="nav-link text-white" href='/books'><i class="fa-solid fa-book-open mr-2"></i>Books</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" rel="nofollow" data-method="delete" href="/users/sign_out"><i class="fa-solid fa-right-from-bracket mr-2"></i>Log out</a>
+                  <a class="nav-link text-white" rel="nofollow" data-method="delete" href="/users/sign_out"><i class="fa-solid fa-sign-out-alt mr-2"></i>Log out</a>
                 </li>
               <% else %>
                 <li class="nav-item">
@@ -45,7 +45,7 @@
                   <a class="nav-link text-white" href='/users/sign_up'><i class="fa-solid fa-user-plus mr-2"></i>Sign up</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href='/users/sign_in'><i class="fa-solid fa-right-to-bracket mr-2"></i>Log in</a>
+                  <a class="nav-link text-white" href='/users/sign_in'><i class="fa-solid fa-sign-in-alt mr-2"></i>Log in</a>
                 </li>
               <% end %>
             </ul>
