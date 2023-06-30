@@ -2,11 +2,11 @@
   <h1>User info</h1>
   <%= form_with model: @user do |f| %>
     <label for="inputName">Name</label></br>
-    <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"Name" %></br>
+    <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"Name", style:"width:25%" %></br>
     <label for="inputImage">Image</label></br>
     <%= f.file_field :profile_image, placeholder: "Image", accept: "image/*" %></br>
     <label for="inputIntroduction">Introduction</label></br>
-    <%= f.text_area :introduction, autofocus: true, id:"inputIntroduction", placeholder:"プロフィールを入力してください。" %></br>
+    <%= f.text_area :introduction, autofocus: true, id:"inputIntroduction", style:"width:50%", placeholder:"プロフィールを入力してください。" %></br>
     <%= f.submit "Update User" %>
   <% end %>
 
